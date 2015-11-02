@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Bangalore</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.css' rel='stylesheet' />
+<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.css' rel='stylesheet' />
+<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.Default.css' rel='stylesheet' />
+<script src="leaflet-heat.js"></script>
+
+<style>
+  body { margin:0; padding:0; }
+  #map { position:absolute; top:0; bottom:0; width:100%; }
+</style>
+</head>
+<body>
+<style>
+.ui-select {
+  background:#fff;
+  position:absolute;
+  top:10px;
+  right:10px;
+  z-index:100;
+  padding:10px;
+  border-radius:3px;
+  }
+  .custom-popup .leaflet-popup-content-wrapper {
+  background:#2c3e50;
+  color:#fff;
+  font-size:16px;
+  line-height:24px;
+  }
+.custom-popup .leaflet-popup-content-wrapper a {
+  color:rgba(255,255,255,0.5);
+  }
+.custom-popup .leaflet-popup-tip-container {
+  width:30px;
+  height:15px;
+  }
+.custom-popup .leaflet-popup-tip {
+  border-left:15px solid transparent;
+  border-right:15px solid transparent;
+  border-top:15px solid #2c3e50;
+  }
+</style>
+
+
+<div class='custom-popup' id='map'></div>
+
+<script src="bus_stop.js"></script>
+
+<script src="atm.js"></script>
+<script src="res.js"></script>
+<script src="pub.js"></script>
+<script src="metro.js"></script>
+<script src="foreignexchange.js"></script>  
+<script src="shoppingmall.js"></script>     
+<script>
+L.mapbox.accessToken = 'pk.eyJ1IjoicmFteWFyYWd1cGF0aHkiLCJhIjoiOHRoa2JJTSJ9.6Y38XMOQL80LZyrUAjXgIg';
+var southWest = L.latLng(14.10, 74.99),
+    northEast = L.latLng(11.36, 79.98),
+    bounds = L.latLngBounds(southWest, northEast);
+//12.9678/77.5867
+var map = L.mapbox.map('map', 'ruthmaben.0c95069b', {
+  maxBounds: bounds,
+    maxZoom: 19,
+    minZoom: 10
+	});
+var baseLayers = {};
+//adding markerclusters
+var busStopCluster = new L.MarkerClusterGroup({
+      
+      iconCreateFunction: function(cluster) {
+        return L.mapbox.marker.icon({
+          // show the number of markers in the cluster on the icon.
+          'marker-symbol': cluster.getChildCount(),
+          'marker-color': '#FE2E2E',
+          "marker-size": "large"
+        });
+      }
+    });
+var restaurantCluster = new L.MarkerClusterGroup({
+      
+      iconCreateFunction: function(cluster) {
+        return L.mapbox.marker.icon({
+          // show the number of markers in the cluster on the icon.
+          'marker-symbol': cluster.getChildCount(),
+          'marker-color': '#F781F3',
+          "marker-size": "large"
+        });
+      }
+    });
+var pubCluster = new L.MarkerClusterGroup({
+      
+      iconCreateFunction: function(cluster) {
+        return L.mapbox.marker.icon({
+          // show the number of markers in the cluster on the icon.
+          'marker-symbol': cluster.getChildCount(),
+          'marker-color': '#98292E',
+          "marker-size": "large"
+        });
+      }
+    });
+var atmCluster = new L.MarkerClusterGroup({
+      
+      iconCreateFunction: function(cluster) {
+        return L.mapbox.marker.icon({
+          // show the number of markers in the cluster on the icon.
+          'marker-symbol': cluster.getChildCount(),
+          'marker-color': '#6b47b6',
+          "marker-size": "large"
+        });
+      }
+    });
+var metroCluster = new L.MarkerClusterGroup({
+     
+      iconCreateFunction: function(cluster) {
+        return L.mapbox.marker.icon({
+          // show the number of markers in the cluster on the icon.
+          'marker-symbol': cluster.getChildCount(),
+          'marker-color': '#424242',
+          "marker-size": "large"
+        });
+      }
+    });
+var foreignexchangeCluster = new L.MarkerClusterGroup({
+      
+      iconCreateFunction: function(cluster) {
+        return L.mapbox.marker.icon({
+          // show the number of markers in the cluster on the icon.
+          'marker-symbol': cluster.getChildCount(),
+          'marker-color': '#0cf2f0',
+          "marker-size": "large"
+        });
+      }
+    });
+    
+var shoppingmallCluster = new L.MarkerClusterGroup({
+      
+      iconCreateFunction: function(cluster) {
+        return L.mapbox.marker.icon({
+          // show the number of markers in the cluster on the icon.
+          'marker-symbol': cluster.getChildCount(),
+          'marker-color': '#CE3386',
+          "marker-size": "large"
+        });
+      }
+    });
+//var heatMap = new L.TileLayer.HeatCanvas();
+// var myLayer = L.mapbox.featureLayer(); -> returns a map.layer
+// myLayer.setGeoJSON(busstopgeoJson);
+var busStop = L.geoJson(busStop_geoJson,{
+    pointToLayer: L.mapbox.marker.style,
+    onEachFeature: function (feature, layer) {
+      layer.bindPopup(feature.properties.name); //adding popups
+    }
+}); // returns a bunch of markers
+busStopCluster.addLayer(busStop);
+var atm = L.geoJson(atm_geoJson,{
+    pointToLayer: L.mapbox.marker.style,
+    onEachFeature: function (feature, layer) {
+      layer.bindPopup(feature.properties.name); //adding popups
+    }
+}); // returns a bunch of markers
+atmCluster.addLayer(atm);
+var metro = L.geoJson(metro_geoJson,{
+    pointToLayer: L.mapbox.marker.style,
+    onEachFeature: function (feature, layer) {
+      layer.bindPopup(feature.properties.name); //adding popups
+    }
+}); // returns a bunch of markers
+metroCluster.addLayer(metro);
+var restaurant = L.geoJson(res_geoJson,{
+    pointToLayer: L.mapbox.marker.style,
+    onEachFeature: function (feature, layer) {
+      layer.bindPopup(feature.properties.name); //adding popups
+    }
+}); // returns a bunch of markers
+restaurantCluster.addLayer(restaurant);
+var foreignexchange = L.geoJson(foreignexchange_geoJson,{
+    pointToLayer: L.mapbox.marker.style,
+    onEachFeature: function (feature, layer) {
+      layer.bindPopup(feature.properties.name); //adding popups
+    }
+}); // returns a bunch of markers
+foreignexchangeCluster.addLayer(foreignexchange);
+    
+var pub = L.geoJson(pub_geoJson,{
+    pointToLayer: L.mapbox.marker.style,
+    onEachFeature: function (feature, layer) {
+    layer.bindPopup(feature.properties.name); //adding popups
+    }
+}); // returns a bunch of markers
+     pubCluster.addLayer(pub);
+   
+var shoppingmall = L.geoJson(shoppingmall_geoJson,{
+    pointToLayer: L.mapbox.marker.style,
+    onEachFeature: function (feature, layer) {
+      layer.bindPopup(feature.properties.name); //adding popups
+    }
+}); // returns a bunch of markers
+     shoppingmallCluster.addLayer(shoppingmall);
+var overlays = {
+"Bus Stops": busStopCluster,
+"Restaurants": restaurantCluster,
+"Pubs": pubCluster,
+"ATM": atmCluster,
+"Metro": metroCluster,
+"Foreign Exchange": foreignexchangeCluster,
+"Shopping Mall": shoppingmallCluster 
+//"Heatmap":heatMap
+};
+L.control.layers(baseLayers, overlays).addTo(map);
+</script>
+
+</body>
+</html>
