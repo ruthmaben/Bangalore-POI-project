@@ -10,64 +10,21 @@ var map = L.mapbox.map('map', 'ruthmaben.0c95069b', {
 	});
 var baseLayers = {};
 //adding markerclusters
-var busStopCluster = new L.MarkerClusterGroup({
-      
-      iconCreateFunction: function(cluster) {
-        return L.mapbox.marker.icon({
-          // show the number of markers in the cluster on the icon.
-          'marker-symbol': cluster.getChildCount(),
-          'marker-color': '#FE2E2E',
-          "marker-size": "large"
-        });
-      }
-    });
-var restaurantCluster = new L.MarkerClusterGroup({
-      
-      iconCreateFunction: function(cluster) {
-        return L.mapbox.marker.icon({
-          // show the number of markers in the cluster on the icon.
-          'marker-symbol': cluster.getChildCount(),
-          'marker-color': '#F781F3',
-          "marker-size": "large"
-        });
-      }
-    });
-var pubCluster = new L.MarkerClusterGroup({
-      
-      iconCreateFunction: function(cluster) {
-        return L.mapbox.marker.icon({
-          // show the number of markers in the cluster on the icon.
-          'marker-symbol': cluster.getChildCount(),
-          'marker-color': '#98292E',
-          "marker-size": "large"
-        });
-      }
-    });
-var atmCluster = new L.MarkerClusterGroup({
-      
-      iconCreateFunction: function(cluster) {
-        return L.mapbox.marker.icon({
-          // show the number of markers in the cluster on the icon.
-          'marker-symbol': cluster.getChildCount(),
-          'marker-color': '#6b47b6',
-          "marker-size": "large"
-        });
-      }
-    });
-var metroCluster = new L.MarkerClusterGroup({
-     
-      iconCreateFunction: function(cluster) {
-        return L.mapbox.marker.icon({
-          // show the number of markers in the cluster on the icon.
-          'marker-symbol': cluster.getChildCount(),
-          'marker-color': '#424242',
-          "marker-size": "large"
-        });
-      }
-    });
+
 var foreignexchangeCluster = createClusters('foreignexchange');
     
 var shoppingmallCluster = createClusters('shoppingmall');
+
+var atmCluster = createClusters('atm');
+
+var metroCluster = createClusters('metro');
+
+var busStopCluster = createClusters('bus_stop');
+
+var pubCluster = createClusters('pub');
+
+var restaurantCluster = createClusters('restaurant');
+
 //var heatMap = new L.TileLayer.HeatCanvas();
 // var myLayer = L.mapbox.featureLayer(); -> returns a map.layer
 // myLayer.setGeoJSON(busstopgeoJson);
@@ -135,6 +92,72 @@ function createClusters(poi){
         });
       }
     });
+          
+      case 'atm':
+       var createCluster = new L.MarkerClusterGroup({
+      
+        iconCreateFunction: function(cluster) {
+          return L.mapbox.marker.icon({
+          // show the number of markers in the cluster on the icon.
+          'marker-symbol': cluster.getChildCount(),
+          'marker-color': '#6b47b6',
+          "marker-size": "large"
+        });
+      }
+    }); 
+          
+          
+     case 'bus_stop':
+       var createCluster = new L.MarkerClusterGroup({
+      
+        iconCreateFunction: function(cluster) {
+          return L.mapbox.marker.icon({
+          // show the number of markers in the cluster on the icon.
+          'marker-symbol': cluster.getChildCount(),
+          'marker-color': '#FE2E2E',
+          "marker-size": "large"
+        });
+      }
+    });       
+          
+     case 'metro':
+       var createCluster = new L.MarkerClusterGroup({
+      
+        iconCreateFunction: function(cluster) {
+          return L.mapbox.marker.icon({
+          // show the number of markers in the cluster on the icon.
+          'marker-symbol': cluster.getChildCount(),
+          'marker-color': '#424242',
+          "marker-size": "large"
+        });
+      }
+    });         
+          
+    case 'pub':
+       var createCluster = new L.MarkerClusterGroup({
+      
+        iconCreateFunction: function(cluster) {
+          return L.mapbox.marker.icon({
+          // show the number of markers in the cluster on the icon.
+          'marker-symbol': cluster.getChildCount(),
+          'marker-color': '#98292E',
+          "marker-size": "large"
+        });
+      }
+    });         
+               
+     case 'restaurant':
+       var createCluster = new L.MarkerClusterGroup({
+      
+        iconCreateFunction: function(cluster) {
+          return L.mapbox.marker.icon({
+          // show the number of markers in the cluster on the icon.
+          'marker-symbol': cluster.getChildCount(),
+          'marker-color': '#F781F3',
+          "marker-size": "large"
+        });
+      }
+    });                           
   }
   return createCluster;
 }
