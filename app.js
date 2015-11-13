@@ -27,6 +27,8 @@ var restaurantCluster = createClusters('restaurant');
 
 var sportscentreCluster = createClusters('sports_centre');
 
+var touristattractionCluster = createClusters('tourist_attraction');
+
 //var heatMap = new L.TileLayer.HeatCanvas();
 // var myLayer = L.mapbox.featureLayer(); -> returns a map.layer
 // myLayer.setGeoJSON(busstopgeoJson);
@@ -55,6 +57,9 @@ var shoppingmall = bindingPopup(shoppingmall_geoJson);
 var sportscentre = bindingPopup(sports_centre_geoJson);
      sportscentreCluster.addLayer(sportscentre);
 
+var touristattraction = bindingPopup(tourist_attraction_geoJson);
+     touristattractionCluster.addLayer(touristattraction);
+
 var overlays = {
 "Bus Stops": busStopCluster,
 "Restaurants": restaurantCluster,
@@ -63,7 +68,9 @@ var overlays = {
 "Metro": metroCluster,
 "Foreign Exchange": foreignexchangeCluster,
 "Shopping Mall": shoppingmallCluster,
-"Sports Centre": sportscentreCluster    
+"Sports Centre": sportscentreCluster, 
+"tourist attraction": touristattractionCluster 
+    
 //"Heatmap":heatMap
 };
 L.control.layers(baseLayers, overlays).addTo(map);
@@ -177,6 +184,23 @@ function createClusters(poi){
         });
       }
     });
+          
+          
+    case 'tourist_attraction':
+       var createCluster = new L.MarkerClusterGroup({
+      
+        iconCreateFunction: function(cluster) {
+          return L.mapbox.marker.icon({
+          // show the number of markers in the cluster on the icon.
+          'marker-symbol': cluster.getChildCount(),
+          'marker-color': '#fb4752',
+          "marker-size": "large"
+        });
+      }
+    });
+          
+          
+          
           
   }
   return createCluster;
