@@ -24,7 +24,7 @@ var tourist_attraction_geoJson =
         "tourism": "attraction",
         "type": "multipolygon",
         "wikipedia": "en:Vidhana Soudha",
-            "marker-color": "#fb4752",
+            "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },
@@ -445,7 +445,7 @@ var tourist_attraction_geoJson =
         "name": "Lalbagh Botanical Gardens",
         "name:kn": "ಲಾಲ್‌ಬಾಗ್ ಸಸ್ಯೋದ್ಯಾನ",
         "tourism": "attraction",
-           "marker-color": "#fb4752",
+           "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },
@@ -731,7 +731,7 @@ var tourist_attraction_geoJson =
         "area": "yes",
         "name": "Tippu's Summer Palace",
         "tourism": "attraction",
-           "marker-color": "#fb4752",
+           "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },
@@ -779,7 +779,7 @@ var tourist_attraction_geoJson =
         "historic": "archaeological_site",
         "name": "Tippu's Fort",
         "tourism": "attraction",
-           "marker-color": "#fb4752",
+           "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },
@@ -829,7 +829,7 @@ var tourist_attraction_geoJson =
       "properties": {
         "@id": "way/38871248",
         "tourism": "attraction",
-           "marker-color": "#fb4752",
+           "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },
@@ -892,7 +892,7 @@ var tourist_attraction_geoJson =
         "@id": "way/45740328",
         "name": "Patel's Inn Resort",
         "tourism": "attraction",
-           "marker-color": "#fb4752",
+           "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },
@@ -938,7 +938,7 @@ var tourist_attraction_geoJson =
       "properties": {
         "@id": "way/52032467",
         "tourism": "attraction",
-           "marker-color": "#fb4752",
+           "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },
@@ -1008,7 +1008,7 @@ var tourist_attraction_geoJson =
       "properties": {
         "@id": "way/52059213",
         "tourism": "attraction",
-           "marker-color": "#fb4752",
+           "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },
@@ -1056,7 +1056,7 @@ var tourist_attraction_geoJson =
         "building": "yes",
         "name": "Jawaharlal Nehru Planetarium",
         "tourism": "attraction",
-           "marker-color": "#fb4752",
+           "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },
@@ -1137,7 +1137,7 @@ var tourist_attraction_geoJson =
         "natural": "water",
         "sport": "swimming",
         "tourism": "attraction",
-           "marker-color": "#fb4752",
+           "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },
@@ -1176,7 +1176,7 @@ var tourist_attraction_geoJson =
         "@id": "way/114786294",
         "name": "CV Raman's House",
         "tourism": "attraction",
-           "marker-color": "#fb4752",
+           "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },
@@ -1215,7 +1215,7 @@ var tourist_attraction_geoJson =
         "@id": "way/133353066",
         "name": "Mosque",
         "tourism": "attraction",
-           "marker-color": "#fb4752",
+           "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },
@@ -1276,7 +1276,7 @@ var tourist_attraction_geoJson =
         "name": "Bangalore Palace",
         "name:kn": "ಬೆಂಗಳೂರು ಅರಮನೆ",
         "tourism": "attraction",
-           "marker-color": "#fb4752",
+           "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },
@@ -1627,7 +1627,7 @@ var tourist_attraction_geoJson =
         "@id": "way/144989738",
         "name": "HAL Aerospace Museum",
         "tourism": "attraction",
-           "marker-color": "#fb4752",
+           "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },
@@ -1698,7 +1698,7 @@ var tourist_attraction_geoJson =
         "name": "Sir Puttanna Chetty Town Hall",
         "name:kn": "ಸರ್ ಪುಟ್ಟಣ್ಣ ಚೆಟ್ಟಿ ಟೌನ್ ಹಾಲ್",
         "tourism": "attraction",
-           "marker-color": "#fb4752",
+           "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },
@@ -1818,7 +1818,7 @@ var tourist_attraction_geoJson =
         "leisure": "park",
         "name": "East Lalbagh (Proposed)",
         "tourism": "attraction",
-           "marker-color": "#fb4752",
+           "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },
@@ -1893,7 +1893,7 @@ var tourist_attraction_geoJson =
         "@id": "way/199853336",
         "name": "Ivy - The Unwind Island ",
         "tourism": "attraction",
-           "marker-color": "#fb4752",
+           "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },
@@ -1971,7 +1971,7 @@ var tourist_attraction_geoJson =
         "name:kn": "ಮಯೊ ಹಾಲ್",
         "tourism": "attraction",
         "wikipedia": "https://en.wikipedia.org/wiki/Mayo_Hall_%28Bangalore%29",
-           "marker-color": "#fb4752",
+           "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },
@@ -2198,7 +2198,7 @@ var tourist_attraction_geoJson =
         "@id": "way/253432464",
         "name": "Grips Go Karting",
         "tourism": "attraction",
-           "marker-color": "#fb4752",
+           "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },
@@ -2261,7 +2261,7 @@ var tourist_attraction_geoJson =
         "@id": "way/273780384",
         "name": "Indira Gandhi Musical Fountain",
         "tourism": "attraction",
-           "marker-color": "#fb4752",
+           "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },
@@ -2365,7 +2365,7 @@ var tourist_attraction_geoJson =
         "historic": "memorial",
         "name": "National Military Memorial",
         "tourism": "attraction",
-           "marker-color": "#fb4752",
+           "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },
@@ -2419,7 +2419,7 @@ var tourist_attraction_geoJson =
       "properties": {
         "@id": "way/327551780",
         "tourism": "attraction",
-           "marker-color": "#fb4752",
+           "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },
@@ -2471,7 +2471,7 @@ var tourist_attraction_geoJson =
         "created_by": "Potlatch 0.7b",
         "name": "Rajarajeshwari Arch",
         "tourism": "attraction",
-           "marker-color": "#fb4752",
+           "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },
@@ -2491,7 +2491,7 @@ var tourist_attraction_geoJson =
         "addr:street": "M G Road",
         "name": "Cauvery Emporium",
         "tourism": "attraction",
-           "marker-color": "#fb4752",
+           "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },
@@ -2510,7 +2510,7 @@ var tourist_attraction_geoJson =
         "@id": "node/347241683",
         "name": "Lalbagh Glasshouse",
         "tourism": "attraction",
-           "marker-color": "#fb4752",
+           "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },
@@ -2529,7 +2529,7 @@ var tourist_attraction_geoJson =
         "@id": "node/428843492",
         "name": "Government Aquarium",
         "tourism": "attraction",
-           "marker-color": "#fb4752",
+           "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },
@@ -2548,7 +2548,7 @@ var tourist_attraction_geoJson =
         "@id": "node/442437989",
         "name": "Krishnarajapuram Hanging Bridge",
         "tourism": "attraction",
-           "marker-color": "#fb4752",
+           "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },
@@ -2567,7 +2567,7 @@ var tourist_attraction_geoJson =
         "@id": "node/442972845",
         "name": "ASC War Memorial",
         "tourism": "attraction",
-           "marker-color": "#fb4752",
+           "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },
@@ -2586,7 +2586,7 @@ var tourist_attraction_geoJson =
         "@id": "node/590141891",
         "name": "Air Force Station Jalahalli",
         "tourism": "attraction",
-           "marker-color": "#fb4752",
+           "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },
@@ -2605,7 +2605,7 @@ var tourist_attraction_geoJson =
         "@id": "node/665062581",
         "name": "Kempe Gowda Statue",
         "tourism": "attraction",
-           "marker-color": "#fb4752",
+           "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },
@@ -2624,7 +2624,7 @@ var tourist_attraction_geoJson =
         "@id": "node/665062640",
         "name": "Kempe Gowda Tower",
         "tourism": "attraction",
-           "marker-color": "#fb4752",
+           "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },
@@ -2643,7 +2643,7 @@ var tourist_attraction_geoJson =
         "@id": "node/665067315",
         "name": "Freedom Park",
         "tourism": "attraction",
-           "marker-color": "#fb4752",
+           "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },
@@ -2662,7 +2662,7 @@ var tourist_attraction_geoJson =
         "@id": "node/665074240",
         "name": "DNA Statue",
         "tourism": "attraction",
-           "marker-color": "#fb4752",
+           "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },
@@ -2682,7 +2682,7 @@ var tourist_attraction_geoJson =
         "historic": "memorial",
         "name": "War Memorial",
         "tourism": "attraction",
-           "marker-color": "#fb4752",
+           "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },
@@ -2701,7 +2701,7 @@ var tourist_attraction_geoJson =
         "@id": "node/951466462",
         "name": "Viviekananda Park",
         "tourism": "attraction",
-           "marker-color": "#fb4752",
+           "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },
@@ -2721,7 +2721,7 @@ var tourist_attraction_geoJson =
         "landmark": "statue",
         "name": "Rajiv Gandhi Statue",
         "tourism": "attraction",
-           "marker-color": "#fb4752",
+           "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },
@@ -2741,7 +2741,7 @@ var tourist_attraction_geoJson =
         "historic": "monument",
         "name": "Peninsular Gneiss National Monument",
         "tourism": "attraction",
-           "marker-color": "#fb4752",
+           "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },
@@ -2761,7 +2761,7 @@ var tourist_attraction_geoJson =
         "name": "War Tank",
         "note": "Tank captured during war with Pakistan",
         "tourism": "attraction",
-           "marker-color": "#fb4752",
+           "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },
@@ -2782,7 +2782,7 @@ var tourist_attraction_geoJson =
         "monument": "Statue",
         "name": "Sangolli Rayanna's Statue",
         "tourism": "attraction",
-           "marker-color": "#fb4752",
+           "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },
@@ -2803,7 +2803,7 @@ var tourist_attraction_geoJson =
         "name": "Ameoba Bowling Alley",
         "sport": "9pin",
         "tourism": "attraction",
-           "marker-color": "#fb4752",
+           "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },
@@ -2823,7 +2823,7 @@ var tourist_attraction_geoJson =
         "historic": "statue",
         "name": "Raja Ram Mohan Roy",
         "tourism": "attraction",
-           "marker-color": "#fb4752",
+           "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },
@@ -2842,7 +2842,7 @@ var tourist_attraction_geoJson =
         "@id": "node/1709379170",
         "name": "Jesus on the Cross",
         "tourism": "attraction",
-           "marker-color": "#fb4752",
+           "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },
@@ -2861,7 +2861,7 @@ var tourist_attraction_geoJson =
         "@id": "node/2127083897",
         "name": "Ameoba Bowling Alley",
         "tourism": "attraction",
-           "marker-color": "#fb4752",
+           "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },
@@ -2879,7 +2879,7 @@ var tourist_attraction_geoJson =
       "properties": {
         "@id": "node/2405825779",
         "tourism": "attraction",
-           "marker-color": "#fb4752",
+           "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },
@@ -2898,7 +2898,7 @@ var tourist_attraction_geoJson =
         "@id": "node/2586797602",
         "name": "Ganesha Idol",
         "tourism": "attraction",
-           "marker-color": "#fb4752",
+           "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },
@@ -2917,7 +2917,7 @@ var tourist_attraction_geoJson =
         "@id": "node/3306178779",
         "name": "HAL Aerospace Museum",
         "tourism": "attraction",
-           "marker-color": "#fb4752",
+           "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },
@@ -2938,7 +2938,7 @@ var tourist_attraction_geoJson =
         "name": "Rev. Ferdinand Kittel",
         "tourism": "attraction",
         "wikipedia": "https://en.wikipedia.org/wiki/Ferdinand_Kittel",
-           "marker-color": "#fb4752",
+           "marker-color": "#F3F781",
          "marker-size": "large",
         "marker-symbol": "camera"
       },

@@ -193,7 +193,8 @@ function createClusters(poi){
           return L.mapbox.marker.icon({
           // show the number of markers in the cluster on the icon.
           'marker-symbol': cluster.getChildCount(),
-          'marker-color': '#fb4752',
+          'marker-color': '#F3F781',
+          "marker-size": "large"
           "marker-size": "large"
         });
       }
