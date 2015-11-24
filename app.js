@@ -7,27 +7,27 @@ var map = L.mapbox.map('map', 'ruthmaben.0c95069b', {
   maxBounds: bounds,
     maxZoom: 19,
     minZoom: 10
-	});
+  });
 var baseLayers = {};
 //adding markerclusters
 
-var foreignexchangeCluster = createClusters('foreignexchange');
+var foreignexchangeCluster = createClusters('foreignexchange','large',"#0cf2f0");
     
-var shoppingmallCluster = createClusters('shoppingmall');
+var shoppingmallCluster = createClusters('shoppingmall','large','#CE3386');
 
-var atmCluster = createClusters('atm');
+var atmCluster = createClusters('atm','large',"#6b47b6");
 
-var metroCluster = createClusters('metro');
+var metroCluster = createClusters('metro','large',"#424242");
 
-var busStopCluster = createClusters('bus_stop');
+var busStopCluster = createClusters('bus_stop','large',"#FE2E2E");
 
-var pubCluster = createClusters('pub');
+var pubCluster = createClusters('pub','large',"#98292E");
 
-var restaurantCluster = createClusters('restaurant');
+var restaurantCluster = createClusters('restaurant','large',"#F781F3");
 
-var sportscentreCluster = createClusters('sports_centre');
+var sportscentreCluster = createClusters('sports_centre','large',"#40A8D7");
 
-var touristattractionCluster = createClusters('tourist_attraction');
+var touristattractionCluster = createClusters('tourist_attraction','large',"#fb4752");
 
 //var heatMap = new L.TileLayer.HeatCanvas();
 // var myLayer = L.mapbox.featureLayer(); -> returns a map.layer
@@ -75,136 +75,24 @@ var overlays = {
 };
 L.control.layers(baseLayers, overlays).addTo(map);
 
-function createClusters(poi){
-  console.log(poi);
-  switch(poi)
-  {
-    case 'shoppingmall':
-       var createCluster = new L.MarkerClusterGroup({
+function createClusters(poi,markersize,markercolor){
+  
+   var createCluster = new L.MarkerClusterGroup({
       
         iconCreateFunction: function(cluster) {
           return L.mapbox.marker.icon({
           // show the number of markers in the cluster on the icon.
               'marker-symbol': cluster.getChildCount(),
-              'marker-color': '#CE3386',
-              "marker-size": "large"
-          
-          
-         });
-       }
-      });
-    case 'foreignexchange':
-       var createCluster = new L.MarkerClusterGroup({
-      
-        iconCreateFunction: function(cluster) {
-          return L.mapbox.marker.icon({
-          // show the number of markers in the cluster on the icon.
-          'marker-symbol': cluster.getChildCount(),
-          'marker-color': '#0cf2f0',
-          "marker-size": "large"
-        });
-      }
-    });
-          
-      case 'atm':
-       var createCluster = new L.MarkerClusterGroup({
-      
-        iconCreateFunction: function(cluster) {
-          return L.mapbox.marker.icon({
-          // show the number of markers in the cluster on the icon.
-          'marker-symbol': cluster.getChildCount(),
-          'marker-color': '#6b47b6',
-          "marker-size": "large"
-        });
-      }
-    }); 
-          
-          
-     case 'bus_stop':
-       var createCluster = new L.MarkerClusterGroup({
-      
-        iconCreateFunction: function(cluster) {
-          return L.mapbox.marker.icon({
-          // show the number of markers in the cluster on the icon.
-          'marker-symbol': cluster.getChildCount(),
-          'marker-color': '#FE2E2E',
-          "marker-size": "large"
-        });
-      }
-    });       
-          
-     case 'metro':
-       var createCluster = new L.MarkerClusterGroup({
-      
-        iconCreateFunction: function(cluster) {
-          return L.mapbox.marker.icon({
-          // show the number of markers in the cluster on the icon.
-          'marker-symbol': cluster.getChildCount(),
-          'marker-color': '#424242',
-          "marker-size": "large"
-        });
-      }
-    });         
-          
-    case 'pub':
-       var createCluster = new L.MarkerClusterGroup({
-      
-        iconCreateFunction: function(cluster) {
-          return L.mapbox.marker.icon({
-          // show the number of markers in the cluster on the icon.
-          'marker-symbol': cluster.getChildCount(),
-          'marker-color': '#98292E',
-          "marker-size": "large"
-        });
-      }
-    });         
-               
-     case 'restaurant':
-       var createCluster = new L.MarkerClusterGroup({
-      
-        iconCreateFunction: function(cluster) {
-          return L.mapbox.marker.icon({
-          // show the number of markers in the cluster on the icon.
-          'marker-symbol': cluster.getChildCount(),
-          'marker-color': '#F781F3',
-          "marker-size": "large"
-        });
-      }
-    });   
-          
-    case 'sports_centre':
-       var createCluster = new L.MarkerClusterGroup({
-      
-        iconCreateFunction: function(cluster) {
-          return L.mapbox.marker.icon({
-          // show the number of markers in the cluster on the icon.
-          'marker-symbol': cluster.getChildCount(),
-          'marker-color': '#40A8D7',
-          "marker-size": "large"
-        });
-      }
-    });
-          
-          
-    case 'tourist_attraction':
-       var createCluster = new L.MarkerClusterGroup({
-      
-        iconCreateFunction: function(cluster) {
-          return L.mapbox.marker.icon({
-          // show the number of markers in the cluster on the icon.
-          'marker-symbol': cluster.getChildCount(),
-          'marker-color': '#fb4752',
-          "marker-size": "large"
-        });
-      }
-    });
-          
-          
-          
-          
-  }
+              'marker-color': markercolor,
+              "marker-size": markersize 
+            });
+          }
+
+  });
+  
   return createCluster;
 }
+
 
 function bindingPopup(geoJSON){
   var whatL_GeoJSONReturns = L.geoJson(geoJSON,{
