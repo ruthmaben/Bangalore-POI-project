@@ -27,7 +27,7 @@ var restaurantCluster = createClusters('restaurant','large',"#F781F3");
 
 var sportscentreCluster = createClusters('sports_centre','large',"#40A8D7");
 
-var touristattractionCluster = createClusters('tourist_attraction','large',"#fb4752");
+var touristattractionCluster = createClusters('tourist_attraction','large',"#F3F781");
 
 //var heatMap = new L.TileLayer.HeatCanvas();
 // var myLayer = L.mapbox.featureLayer(); -> returns a map.layer
@@ -76,6 +76,7 @@ var overlays = {
 L.control.layers(baseLayers, overlays).addTo(map);
 
 function createClusters(poi,markersize,markercolor){
+
   
    var createCluster = new L.MarkerClusterGroup({
       
